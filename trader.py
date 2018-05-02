@@ -109,9 +109,11 @@ if __name__ == '__main__':
                             i += 2
                         
                         j=3
-                        a = list(set(x) - dict[line[2]])
+                        a = set(x) - set(line[2])
+                        #a = list(set(x) - dict[line[2]])
                         while i<len(line)-1:
-                            b = a - dict[line[j+1]]
+                            b = set(a) - set(line[j+1])
+                            #b = a - dict[line[j+1]]
                             a = b
                             j += 2
                         real = a 
